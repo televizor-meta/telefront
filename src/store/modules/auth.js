@@ -6,7 +6,8 @@ const state = {
 };
 
 const getters = {
-  isAuthenticated: (state) => !!state.user,
+  // isAuthenticated: (state) => !!state.user,
+  isAuthenticated: (state) => true,
   StatePosts: (state) => state.posts,
   StateUser: (state) => state.user,
 };

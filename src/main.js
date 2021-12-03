@@ -5,7 +5,6 @@ import store from "./store"
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "vue-multiselect/dist/vue-multiselect.min.css";
-import "./assets/styles/main.sass"
 
 // Components fot routers
 import axios from "axios";

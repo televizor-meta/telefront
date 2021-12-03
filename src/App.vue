@@ -24,3 +24,6 @@ export default {
   @import 'assets/styles/custom';
 
 </style>
+<style lang="sass">
+    @import "assets/styles/main.sass"
+</style>

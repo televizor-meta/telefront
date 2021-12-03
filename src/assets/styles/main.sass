@@ -1,10 +1,20 @@
 @import "custom-vars"
 
+$white: #E5E5E5
+$gold: #FFB608
+$purple: #9466FF
+
 #app
   min-height: 100vh
 
+
+.ml-auto
+  margin-left: auto
 .h-100vh
   min-height: 100vh
+
+.gold
+  color: $gold!important
 
 .login
   max-width: 400px
@@ -15,3 +25,60 @@
     text-align: center
   &__submit
     background: linear-gradient(180deg, #7700FF 0%, #2F9AFF 100%)
+
+
+.navbar
+  font-size: 18px
+  border-bottom: 1px solid white
+  &-brand
+    padding-top: 0!important
+    img
+      max-width: 180px
+      height: 100%
+  &-dark &-nav .nav-link
+    color: white
+  &-expand-lg &-nav
+    gap: 50px
+
+  &-dark &-nav .show > .nav-link, &-dark &-nav .nav-link.active
+    position: relative
+    &:after
+      content: ""
+      width: 100%
+      position: absolute
+      border: 2px solid $purple
+      bottom: -9px
+      left: 0
+  &-dark.secondary &-nav .show > .nav-link, &-dark.secondary &-nav .nav-link.active:after
+    border-color: #2F9AFF
+
+
+.avatar
+  min-height: calc(100vh - 120px)
+  flex-grow: 1
+  &__container
+    max-width: 1300px
+    width: 100%
+    height: 100%
+  &__point
+    background: url('~@/assets/images/Ellipse 1.svg') center
+    background-size: auto 100%
+    min-width: 50%
+    background-repeat-x: no-repeat
+    min-height: 400px
+  &__comments
+    background: url("~@/assets/images/grradient.svg") center no-repeat
+    background-size: cover
+    padding: 10px
+    border-radius: 5px
+    align-self: center
+    &__bg
+      width: 100%
+      height: 100%
+      background: rgba(255, 255, 255, 0.73)
+      border-radius: 5px
+      ul
+        padding: 25px
+        font-size: 20px
+
+

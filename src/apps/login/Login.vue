@@ -1,5 +1,7 @@
 <template>
   <div class="d-flex justify-content-around align-items-center h-100vh">
+
+
     <div class="login">
       <div class="login__logo">
         <img :src="require('@/assets/images/login_logo.svg')" alt="">
@@ -22,10 +24,10 @@
 
 
 </template>
-
 <script>
+
 export default {
-  name: "Login"
+  name: "Login",
 }
 </script>
 

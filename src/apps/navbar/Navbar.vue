@@ -5,29 +5,34 @@
         <a class="navbar-brand" href="#">
             <img :src="require('@/assets/images/nav-logo.svg')" alt="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" >
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Для меня</a>
+              <router-link tag="a" class="nav-link" to="/">
+                Для меня
+              </router-link>
+              <a class="" aria-current="page" href="#"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Для бизнеса</a>
+              <router-link tag="a" class="nav-link" to="/business">
+                Для бизнеса
+              </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Что-то еще</a>
+              <router-link tag="a" class="nav-link" to="/something-else">
+                Что-то еще
+              </router-link>
             </li>
 
           </ul>
           <div class="navbar-nav">
-            <div class="nav-item">
-                <a class="nav-link gold" aria-current="page" href="#">Подписка</a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Выход</a>
-            </div>
+
+            <router-link tag="a" class="nav-link gold" to="/subscription">
+                Подписка
+              </router-link>
+            <router-link tag="a" class="nav-link" to="/logout">
+                Выход
+            </router-link>
           </div>
         </div>
       </div>
@@ -37,22 +42,29 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent2">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Аватар</a>
+              <router-link tag="a" class="nav-link" to="/" exact>Аватар</router-link>
+
+            </li>
+            <li class="nav-item dropdown">
+                <router-link tag="a" to="/media" class="nav-link dropdown-toggle" data-bs-auto-close="true"  id="navbarDropdown" role="link" aria-expanded="false">Медиа</router-link>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><router-link tag="a" class="dropdown-item" to="/media/photo">Фото</router-link></li>
+                  <li><router-link tag="a" class="dropdown-item" to="/media/videos">Видео</router-link></li>
+                  <li><router-link tag="a" class="dropdown-item" to="/media/articles">Статьи</router-link></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/comments">Комментарии</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Медиа</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Комментарии</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Фейки</a>
+                <router-link class="nav-link"to="/faces">Фейки</router-link>
             </li>
 
           </ul>
         </div>
       </div>
     </nav>
+
   </div>
 
 

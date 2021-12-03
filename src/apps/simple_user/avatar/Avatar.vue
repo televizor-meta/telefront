@@ -1,32 +1,23 @@
 <template>
-  <div class="avatar d-flex justify-content-around align-items-center">
-    <div class="avatar__container d-flex justify-content-between">
-      <div class="avatar__point">
-
+      <div :class="{
+            'avatar__bg': true,
+            'avatar__bg__m': size === 'm',
+            'avatar__bg__xl': size === 'xl'
+           }">
+        <img :src="require('../../../assets/images/Ellipse 1.svg')" alt="">
+        <div id="avatar"></div>
       </div>
-      <div class="avatar__comments">
-        <div class="avatar__comments__bg d-flex align-items-center">
-          <ul>
-            <li>
-                Позитивные упоминания 90%
-            </li>
-            <li>Негативные упоминания 5%</li>
-            <li>Нейтральные упоминания 5%</li>
-            <br>
-            <li>Позитивные ответы 50%</li>
-            <li>Негативные ответы 0%</li>
-            <li>Нейтральные ответы 50%</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </template>
 
 <script>
 export default {
-  name: "Avatar"
+  name: "Avatar",
+  props: {
+    size: {
+      type: String,
+      default: 'm'
+    },
+  },
 }
 </script>
 

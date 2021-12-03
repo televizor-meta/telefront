@@ -3,6 +3,7 @@ import BootstrapVue from "bootstrap-vue";
 import store from "./store"
 
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "vue-multiselect/dist/vue-multiselect.min.css";
 

@@ -1,12 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import store from "../store";
-import Home from "../apps/home/Home.vue";
 import Login from "../apps/login/Login";
-import Dashboard from "../apps/dashboard/Dashboard";
-import RunParser from "@/apps/simple_user/run_parser/RunParser";
 import SimpleUser from "@/apps/simple_user/SimpleUser";
-import Avatar from "@/apps/simple_user/avatar/Avatar";
+import AvatarPage from "@/apps/simple_user/avatar/AvatarPage";
+import UserMedia from "@/apps/simple_user/user_media/UserMedia";
+import Subscription from "@/apps/subscription/Subscription";
+import AvatarMenu from "@/apps/simple_user/avatar/AvatarMenu";
+import AvatarComments from "@/apps/simple_user/avatar/AvatarComments";
 
 Vue.use(VueRouter);
 
@@ -18,17 +18,47 @@ const routes = [
   // },
   {
     path: "/",
-    name: "Avatar",
-    component: Avatar,
+    name: "SimpleUser",
+    component: SimpleUser,
     // meta: { requiresAuth: true },
     children: [
         // при совпадении пути с шаблоном /user/:id
         // в <router-view> компонента User будет показан UserHome
-        { path: '/run', component: RunParser },
+        { path: '',
+            component: AvatarPage ,
+            name: 'AvatarPage',
+            children: [
+                {
+                    path: '',
+                    component: AvatarMenu,
+                    name: 'AvatarMenu',
+                },
+                {
+                    path: 'comments/',
+                    component: AvatarComments,
+                    name: 'AvatarComments',
+                },
 
+            ]
+        },
+        {
+            path: "/media",
+            alias: ["/media/photo", "/media/videos", "/media/pages"],
+            name: "UserMedia",
+            component: UserMedia,
+            // meta: { guest: true },
+          },
+        {
+            path: "/subscription",
+            name: "Subscription",
+            component: Subscription,
+            // meta: { guest: true },
+          },
         // ...остальные вложенные маршруты
       ]
-  },{
+  },
+
+    {
     path: "/login",
     name: "Login",
     component: Login,

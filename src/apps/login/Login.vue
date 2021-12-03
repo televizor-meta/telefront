@@ -5,6 +5,9 @@
     <div class="login">
       <div class="login__logo">
         <img :src="require('@/assets/images/login_logo.svg')" alt="">
+        <div id="avatar">
+
+        </div>
       </div>
       <b-form>
       <label class="sr-only" for="login">Login</label>

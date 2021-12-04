@@ -2,12 +2,15 @@
   "name": "front",
   "version": "1.0.0",
   "private": true,
-  "description": "e",
-  "author": "cristian.jora <joracristi@gmail.com>",
+  "description": "",
+  "author": "",
   "scripts": {
-    "serve": "vue-cli-service --openssl-legacy-provider serve",
-    "build": "vue-cli-service --openssl-legacy-provider build",
-    "lint": "vue-cli-service --openssl-legacy-provider lint"
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --open",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "e2e": "export NODE_OPTIONS=--openssl-legacy-provider && node test/e2e/runner.js",
+    "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --open",
+    "lint-fix": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint --fix"
   },
   "dependencies": {
     "@vue/cli": "^4.5.15",

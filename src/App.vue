@@ -16,7 +16,8 @@ export default {
    isAuth(){
      return store.getters.isAuthenticated
    }
-  }
+  },
+  beforeMount() { document.title = "Телетвин" },
 };
 </script>
 

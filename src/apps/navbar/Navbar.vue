@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img :src="require('@/assets/images/nav-logo.svg')" alt="logo">
         </a>
         <div class="collapse navbar-collapse" >
@@ -14,12 +14,12 @@
               <a class="" aria-current="page" href="#"></a>
             </li>
             <li class="nav-item">
-              <router-link tag="a" class="nav-link" to="/business">
+              <router-link tag="a" class="nav-link" to="/empty/business">
                 Для бизнеса
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link tag="a" class="nav-link" to="/something-else">
+              <router-link tag="a" class="nav-link" to="/empty/more">
                 Что-то еще
               </router-link>
             </li>
@@ -54,10 +54,10 @@
                 </ul>
               </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/comments">Комментарии</router-link>
+              <router-link class="nav-link" to="/empty/comments">Комментарии</router-link>
             </li>
             <li class="nav-item">
-                <router-link class="nav-link"to="/faces">Фейки</router-link>
+                <router-link class="nav-link" to="/empty/fakes">Фейки</router-link>
             </li>
 
           </ul>

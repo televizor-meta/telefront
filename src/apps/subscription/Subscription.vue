@@ -8,15 +8,18 @@
             <i class="pricing_icon">
 
             </i>
-              Первый ништяк
+              1 месяц бесплатно
           </p>
           <p>
             <i class="pricing_icon"></i>
-              Второй ништяк
+              Бесплатный поиск по источникам ОК и ВК
           </p>
+
           <p>
-            <i class="pricing_icon lock"></i>
-              Не ништяк
+            <i class="pricing_icon">
+
+            </i>
+              Бесплатные анкеты
           </p>
           <p>
             <i class="pricing_icon lock"></i>

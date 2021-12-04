@@ -3,10 +3,10 @@ const webpack = require("webpack");
 module.exports = {
   lintOnSave: false,
   assetsDir: "static",
-  filenameHashing: false, // Django will hash file names, not webpack
+  filenameHashing: false,
   runtimeCompiler: true, // See: https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
   pwa: {
-    name: "Vue Black Dashboard",
+    name: "Vue",
   },
   css: {
     // Enable CSS source maps.

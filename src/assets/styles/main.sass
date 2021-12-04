@@ -5,6 +5,8 @@ $gold: #FFB608
 $purple: #9466FF
 $blue: #2F9AFF
 
+*
+  font-family: Roboto, sans-serif
 #app
   min-height: 100vh
 
@@ -33,6 +35,15 @@ $blue: #2F9AFF
 .gappy
   gap: 30px
 
+.small_title
+  position: relative
+  font-style: normal
+  font-weight: normal
+  font-size: 30px
+  text-align: center
+  color: white
+  left: -15px
+  margin-bottom: 20px
 
 .navbar
   font-size: 18px
@@ -70,6 +81,7 @@ $blue: #2F9AFF
   position: relative
   min-height: calc(100vh - 120px)
   flex-grow: 1
+
   &__container
     max-width: 1300px
     width: 100%
@@ -98,6 +110,14 @@ $blue: #2F9AFF
       text-decoration: none!important
       &::after
         border: none
+  &__title
+    color: $blue
+    font-size: 24px
+    position: absolute
+    bottom: 20%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-weight: 600
 
 .wheel_menu
   position: absolute
@@ -186,6 +206,9 @@ $blue: #2F9AFF
   left: 50%
   transform: translate(-50%, -50%)
   animation: float 3s ease-in-out 2s infinite alternate
+  z-index: 2400
+  &:hover+.rotate
+    animation: rotate 0.5s linear infinite
 
 
 .dropdown:hover .dropdown-menu
@@ -216,12 +239,17 @@ $blue: #2F9AFF
   &__container
     align-content: flex-start
     gap: 20px
+    padding: 20px
   &__card
     text-align: center
     color: $blue
     &__title
       margin-top: 15px
       margin-bottom: 20px
+    &__image
+      img
+        width: 100%
+        height: auto
 
 .ugly_border
   &._second
@@ -295,3 +323,7 @@ $blue: #2F9AFF
     img
       width: 100%
       height: auto
+
+
+.media_block
+  max-width: 20%

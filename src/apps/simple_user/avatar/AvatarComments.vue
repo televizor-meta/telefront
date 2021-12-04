@@ -7,7 +7,9 @@
         </router-link>
       </div>
       <avatar size="m"></avatar>
-      <div class="ugly_border comments" >
+      <div>
+          <div class="small_title">Комментарии о тебе</div>
+          <div class="ugly_border comments" >
         <div class="ugly_border__bg d-flex align-items-center">
           <ul v-if="reportType === 'text'">
             <li>
@@ -33,6 +35,8 @@
           <label  class="stats" for="stats_type_report"></label>
         </div>
       </div>
+      </div>
+
   </div>
 </template>
 

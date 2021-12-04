@@ -4,10 +4,12 @@
             'avatar__bg__m': size === 'm',
             'avatar__bg__xl': size === 'xl',
            }">
-        <img class="rotate ghost" :src="require('../../../assets/images/Ellipse 1.svg')" alt="">
         <div id="avatar">
           <img :src="require(`../../../assets/images/avatars/boy/sprite${this.animationState}.png`)"  alt="ghost">
         </div>
+        <img class="rotate ghost" :src="require('../../../assets/images/Ellipse 1.svg')" alt="">
+        <div class="avatar__title" v-if="currentRouteName === 'AvatarMenu'">Мирный Телетвин</div>
+
       </div>
 </template>
 
@@ -24,6 +26,11 @@ export default {
     return{
       polling: null,
       animationState: 2,
+    }
+  },
+  computed: {
+    currentRouteName() {
+        return this.$route.name;
     }
   },
   methods: {

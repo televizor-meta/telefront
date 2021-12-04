@@ -7,6 +7,7 @@ import UserMedia from "@/apps/simple_user/user_media/UserMedia";
 import Subscription from "@/apps/subscription/Subscription";
 import AvatarMenu from "@/apps/simple_user/avatar/AvatarMenu";
 import AvatarComments from "@/apps/simple_user/avatar/AvatarComments";
+import Empty from "@/apps/empty/Empty";
 
 Vue.use(VueRouter);
 
@@ -20,6 +21,7 @@ const routes = [
     path: "/",
     name: "SimpleUser",
     component: SimpleUser,
+    meta: { title: 'Телетвин' },
     // meta: { requiresAuth: true },
     children: [
         // при совпадении пути с шаблоном /user/:id
@@ -27,16 +29,19 @@ const routes = [
         { path: '',
             component: AvatarPage ,
             name: 'AvatarPage',
+            meta: { title: 'Телетвин' },
             children: [
                 {
                     path: '',
                     component: AvatarMenu,
                     name: 'AvatarMenu',
+                    meta: { title: 'Телетвин' },
                 },
                 {
                     path: 'comments/',
                     component: AvatarComments,
                     name: 'AvatarComments',
+                    meta: { title: 'Телетвин' },
                 },
 
             ]
@@ -62,6 +67,12 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login,
+    // meta: { guest: true },
+  },{
+    path: "/empty",
+    alias: ["/empty/business", "/empty/more", "/empty/fakes", "/empty/comments", "/empty/wheel"],
+    name: "Empty",
+    component: Empty,
     // meta: { guest: true },
   },
 ];

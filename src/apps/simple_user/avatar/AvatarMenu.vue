@@ -4,20 +4,20 @@
         <router-link to="/comments">Комментарии о тебе</router-link>
       </div>
       <div class="wheel_menu wheel_menu__2">
-        <a href="">Твои комментарии</a>
+        <router-link to="/empty/wheel">Твои комментарии</router-link>
       </div>
       <div class="wheel_menu wheel_menu__3">
-        <a href="" class="gold">Мероприятия</a>
+        <router-link to="/empty/wheel" class="gold">Мероприятия</router-link>
       </div>
       <avatar size="xl"></avatar>
       <div class="wheel_menu wheel_menu__4">
-        <a href="">Мероприятия</a>
+        <router-link to="/empty/wheel">Мероприятия</router-link>
       </div>
       <div class="wheel_menu wheel_menu__5">
-        <a href="">Публикации</a>
+        <router-link to="/empty/wheel">Публикации</router-link>
       </div>
       <div class="wheel_menu wheel_menu__6">
-        <a href="" class="gold">Круг общения</a>
+        <router-link to="/empty/wheel" class="gold">Круг общения</router-link>
       </div>
 
 

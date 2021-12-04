@@ -5,7 +5,7 @@
   "description": "",
   "author": "",
   "scripts": {
-    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --open",
+    "serve": "vue-cli-service serve --open",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "e2e": "export NODE_OPTIONS=--openssl-legacy-provider && node test/e2e/runner.js",
     "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint",

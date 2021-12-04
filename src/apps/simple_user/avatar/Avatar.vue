@@ -6,7 +6,6 @@
            }">
         <img class="rotate ghost" :src="require('../../../assets/images/Ellipse 1.svg')" alt="">
         <div id="avatar">
-          <h2>{{animationState}}</h2>
           <img :src="require(`../../../assets/images/avatars/boy/sprite${this.animationState}.png`)"  alt="ghost">
         </div>
       </div>

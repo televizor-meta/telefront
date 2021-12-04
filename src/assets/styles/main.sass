@@ -59,6 +59,12 @@ $blue: #2F9AFF
   &-dark.secondary &-nav .show > .nav-link, &-dark.secondary &-nav .nav-link.active:after
     border-color: $blue
 
+.rotate
+  animation: rotate 1.5s linear infinite
+@keyframes rotate
+  to
+    transform: rotate(360deg)
+
 
 .avatar
   position: relative
@@ -96,20 +102,32 @@ $blue: #2F9AFF
 .wheel_menu
   position: absolute
   border-bottom: 1px solid white
+  transition: border-bottom-color 0.2s ease
   font-size: 24px
   text-align: center
+
   &::before
     content: ""
     width: 100px
     height: 1px
     border-top: 1px solid white
+    transition: border-bottom-color 0.2s ease
     position: absolute
     bottom: -1px
+  &:hover
+    border-bottom-color: $blue
+    &:before
+      border-color: $blue
+    a
+      color: $blue
   a
     color: white
     text-decoration: none
+    transition: color 0.2s ease
     &:visited
       color: white
+    &:hover
+      color: $blue
   &__1, &__2, &__3
     &::before
       right: -100px
@@ -150,17 +168,24 @@ $blue: #2F9AFF
       transform: rotate(-10deg)
 
 
+@keyframes float
+  from
+    top: 55%
+  to
+    top: 45%
+
 #avatar
   width: 200px
   height: 200px
-  background-image: url("~@/assets/images/avatars/boy/sprite2.png")
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
+  //background-image: url("~@/assets/images/avatars/boy/sprite2.png")
+  //background-size: cover
+  //background-repeat: no-repeat
+  //background-position: center
   position: absolute
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
+  animation: float 3s ease-in-out 2s infinite alternate
 
 
 .dropdown:hover .dropdown-menu
